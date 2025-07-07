@@ -7,8 +7,9 @@ import ManageServers from './manage-servers/ManageServers.vue'
 <template>
   <div class="container">
     <!-- <Cv></Cv> -->
-    <HomeAccounts></HomeAccounts>
-    <ManageServers></ManageServers>
+    <!-- <HomeAccounts></HomeAccounts>
+    <ManageServers></ManageServers> -->
+    <router-view></router-view>
   </div>
 </template>
 
