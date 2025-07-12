@@ -3,12 +3,15 @@ import Liste from './Liste.vue'
 import Details from './Details.vue'
 import { Candidat } from '@/models/candidat'
 import { provide, ref } from 'vue'
+import { useFetch } from '@/composables/useFetch'
 
-let tabCands = [
-  new Candidat(1, 'bart', 'simpson', 42, 'trainer', 'bart.jpeg'),
-  new Candidat(2, 'homer', 'simpson', 23, 'chef de projet', 'homer.png'),
-  new Candidat(3, 'lisa', 'simpson', 27, 'designer', 'lisa.png'),
-]
+// let tabCands = [
+//   new Candidat(1, 'bart', 'simpson', 42, 'trainer', 'bart.jpeg'),
+//   new Candidat(2, 'homer', 'simpson', 23, 'chef de projet', 'homer.png'),
+//   new Candidat(3, 'lisa', 'simpson', 27, 'designer', 'lisa.png'),
+// ]
+
+const { data, error } = useFetch(`http://localhost:3000/candidats`)
 
 let selectedCand = ref(undefined)
 provide('refSelectedCand', setSelectedCand)
@@ -21,7 +24,7 @@ function setSelectedCand(cand) {
 <template>
   <div class="row">
     <div class="col-5">
-      <Liste :tab="tabCands" :changeCand="selectedCand"></Liste>
+      <Liste :tab="data" :changeCand="selectedCand"></Liste>
     </div>
     <div class="col-7">
       <Details v-if="selectedCand" :selCand="selectedCand"></Details>

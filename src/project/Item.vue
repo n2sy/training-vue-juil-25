@@ -5,14 +5,13 @@ defineProps(['oneCandidate','updateCand'])
 //let emit = defineEmits(['onSelectedCand'])
 
 const selCand = inject("refSelectedCand");
-console.log(selCand);
 
 </script>
 <template>
   <li @click="selCand(oneCandidate)" class="list-group-item">
   <!-- <li @click="emit('onSelectedCand', oneCandidate)" class="list-group-item"> -->
   <img :src="oneCandidate.avatar"></img>
-  {{ oneCandidate.prenom }} {{  oneCandidate.prenom }}
+  {{ oneCandidate.prenom }} {{  oneCandidate.nom }}
   </li>
 </template>
 <style scoped>

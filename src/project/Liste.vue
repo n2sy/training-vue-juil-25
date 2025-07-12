@@ -1,4 +1,5 @@
 <script setup>
+import { inject } from 'vue'
 import Item from './Item.vue'
 defineProps(['tab', 'changeCand'])
 // defineEmits(['onUpdatedCand'])

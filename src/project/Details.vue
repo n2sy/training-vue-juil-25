@@ -1,4 +1,6 @@
 <script setup>
+import { RouterLink } from 'vue-router'
+
 let props = defineProps(['selCand'])
 </script>
 <template>
@@ -53,7 +55,7 @@ let props = defineProps(['selCand'])
         <div class="footer">
           <div class="social-links text-center">
             <button class="btn btn-success">Recruter</button>
-            <a class="btn btn-info">Details</a>
+            <RouterLink :to="`/cv/${selCand.id}`" class="btn btn-info">Details</RouterLink>
           </div>
         </div>
       </div>

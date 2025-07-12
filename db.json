@@ -1,0 +1,35 @@
+{
+  "candidats": [
+    {
+      "prenom": "bart",
+      "nom": "simpson",
+      "age": 30,
+      "profession": "ingénieur",
+      "avatar": "bart.jpeg",
+      "id": 1
+    },
+    {
+      "prenom": "homer",
+      "nom": "simpson",
+      "age": 53,
+      "profession": "chef de projet",
+      "avatar": "homer.png",
+      "id": 2
+    },
+    {
+      "prenom": "lisa",
+      "nom": "simpson",
+      "age": 23,
+      "profession": "designer",
+      "avatar": "lisa.png",
+      "id": 3
+    }
+  ],
+  "users": [
+    {
+      "login": "nidhal@gmail.com",
+      "password": "azerty",
+      "id": 1
+    }
+  ]
+}
